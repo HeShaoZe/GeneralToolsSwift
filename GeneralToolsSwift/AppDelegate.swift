@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  GeneralToolsSwift
 //
-//  Created by hesz on 2018/6/13.
-//  Copyright © 2018年 HSZ. All rights reserved.
+//  Created by HeShaoZe on 2018/6/13.
+//  Copyright © 2018年 HeShaoZe. All rights reserved.
 //
 
 import UIKit
@@ -16,9 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        
         let mainVC = MainViewController.init(nibName: "MainViewController", bundle: nil);
         self.window?.rootViewController = mainVC;
+        //self.window?.makeKeyAndVisible();
         return true
     }
 

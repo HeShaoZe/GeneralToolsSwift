@@ -2,17 +2,18 @@
 //  ViewController.swift
 //  GeneralToolsSwift
 //
-//  Created by hesz on 2018/6/13.
-//  Copyright © 2018年 HSZ. All rights reserved.
+//  Created by HeShaoZe on 2018/6/13.
+//  Copyright © 2018年 HeShaoZe. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
         // Do any additional setup after loading the view, typically from a nib.
     }
 

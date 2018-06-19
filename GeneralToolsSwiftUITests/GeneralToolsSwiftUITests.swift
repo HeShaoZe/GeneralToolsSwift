@@ -2,8 +2,8 @@
 //  GeneralToolsSwiftUITests.swift
 //  GeneralToolsSwiftUITests
 //
-//  Created by hesz on 2018/6/13.
-//  Copyright © 2018年 HSZ. All rights reserved.
+//  Created by HeShaoZe on 2018/6/13.
+//  Copyright © 2018年 HeShaoZe. All rights reserved.
 //
 
 import XCTest

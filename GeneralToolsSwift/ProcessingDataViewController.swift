@@ -1,18 +1,21 @@
 //
-//  LogicalProcessingVC.swift
+//  ProcessingDataViewController.swift
 //  GeneralToolsSwift
 //
-//  Created by hesz on 2018/6/13.
-//  Copyright © 2018年 HSZ. All rights reserved.
+//  Created by HeShaoZe on 2018/6/13.
+//  Copyright © 2018年 HeShaoZe. All rights reserved.
 //
 
 import UIKit
 
-class LogicalProcessingVC: UIViewController {
+class ProcessingDataViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.view.backgroundColor = UIColor.brown;
+        
+        
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +24,6 @@ class LogicalProcessingVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
     /*
     // MARK: - Navigation
 
