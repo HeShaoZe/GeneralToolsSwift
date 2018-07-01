@@ -26,7 +26,6 @@ class MainViewController: UITabBarController {
         
     }
 
-    
     func setupTabBar()
     {
         self.tabBar.isHidden = true;

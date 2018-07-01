@@ -74,7 +74,6 @@ class SelectTabBarView: UIView
         {
             delegateEvent?.selectTabBarIndexFrom(indexSelect: event.tag - 100);
         }
-        
         let indexNum : NSInteger = event.tag - 100;
         self.backIndexNum(indexNum);
     }
