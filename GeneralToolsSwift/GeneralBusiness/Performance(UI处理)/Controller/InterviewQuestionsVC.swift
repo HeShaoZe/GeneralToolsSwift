@@ -1,72 +1,68 @@
 //
-//  PerformanceViewController.swift
+//  InterviewQuestionsVC.swift
 //  GeneralToolsSwift
 //
-//  Created by HeShaoZe on 2018/6/13.
+//  Created by HeShaoZe on 2018/7/4.
 //  Copyright © 2018年 HeShaoZe. All rights reserved.
 //
 
 import UIKit
-import PassKit
 
-class PerformanceViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
-
-    @IBOutlet var myTableView: UITableView!
+class InterviewQuestionsVC: UIViewController,UITableViewDelegate,UITableViewDataSource {
+ 
+    @IBOutlet weak var myTableView: UITableView!
     
     var tableDataArray : Array<Any> = [];
+    
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        self.loadMainView();
+
         // Do any additional setup after loading the view.
+        
+        self.loadMainView();
+        self.loadTableSourceData();
+    }
+    
+    override func viewWillAppear(_ animated: Bool)
+    {
+        super.viewWillAppear(animated);
+        self.hiddenTabBarItem(isHiddenT: true);
+    }
+    
+    override func viewWillDisappear(_ animated: Bool)
+    {
+        super.viewWillDisappear(animated);
+        self.hiddenTabBarItem(isHiddenT: false);
+    }
+    
+    func hiddenTabBarItem(isHiddenT : Bool)
+    {
+        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate;
+        let mainVC : MainViewController = appDelegate.window?.rootViewController as! MainViewController;
+        mainVC.shouldHiddenTabbar(isHidden: isHiddenT);
     }
     
     func loadMainView()
     {
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self;
-        
-        let titleArray = ["打开添加卡片的页面","面试题"];
-        self.tableDataArray = titleArray;
     }
     
+    func loadTableSourceData()
+    {
+        let interviewHandle = InterViewDataHandle.init();
+        self.tableDataArray = interviewHandle.loadFileSourceData();
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    ///打开卡包
-    func openAppleWalletPage()
-    {
-        let filePath = Bundle.main.path(forResource: "PassKit-Business-Card", ofType: "pkpass");
-        print("filePathfjdijf---\(String(describing: filePath))----\(filePath?.count)");
-        
-        if filePath == nil
-        {
-            return;
-        }
-        let passData =  NSData.init(contentsOfFile: filePath!);
-        var errorP : NSError?;
-        let passSource = PKPass.init(data: passData! as Data, error: &errorP);
-        
-        if ((errorP) != nil)
-        {
-            print("errorPdjifj---\(String(describing: errorP?.description))");
-        }
-        
-        let passVC = PKAddPassesViewController.init(pass: passSource);
-        self.present(passVC, animated: true, completion: nil);
-    }
 
-    ///打开面试题页面
-    func openInterViewQuestionPage()
-    {
-        let interViewPage = InterviewQuestionsVC.init(nibName: "InterviewQuestionsVC", bundle: nil);
-        self.navigationController?.pushViewController(interViewPage, animated: true);
-    }
-    
-    ///tableViewDelegate 
+    ///UITableViewDelegate
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
         return self.tableDataArray.count;
@@ -74,19 +70,22 @@ class PerformanceViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
     {
-        //        var cell : InterViewTitleCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! InterViewTitleCell;
+//        var cell : InterViewTitleCell = tableView.dequeueReusableCell(withIdentifier: "cell") as! InterViewTitleCell;
         //print("celldjifj---\(cell)");
         let  cell = Bundle.main.loadNibNamed("InterViewTitleCell", owner: self, options: nil)?.first as! InterViewTitleCell;
-        let titleString = self.tableDataArray[indexPath.row];
-        cell.interViewTitleLable.text = titleString as? String;
+        
+        let dataDcit = self.tableDataArray[indexPath.row];
+        let interModel = InterViewModel.init();
+        interModel.loadModelWithParameter(parameterDict: dataDcit as! Dictionary<String, Any>);
+        cell.loadMainViewWith(interModel: interModel);
         return cell;
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat
     {
-        let titleString = self.tableDataArray[indexPath.row];
-        
-        let rowString : NSString = titleString as! NSString;
+        let dataDcit = self.tableDataArray[indexPath.row] as! NSDictionary;
+    
+        let rowString : NSString = dataDcit["title"] as! NSString;
         
         let attri = [kCTFontAttributeName as NSAttributedStringKey:UIFont.systemFont(ofSize: 18)];
         //let stringSize =  rowString.size(withAttributes: attri);
@@ -105,15 +104,13 @@ class PerformanceViewController: UIViewController,UITableViewDelegate,UITableVie
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        if indexPath.row == 0
-        {
-             self.openAppleWalletPage();
-        }
-        else if indexPath.row == 1
-        {
-            self.openInterViewQuestionPage();
-        }
+        let dataDcit = self.tableDataArray[indexPath.row] as! NSDictionary;
+        let interDetailVC = InterviewQuestionsDetailVC.init(nibName: "InterviewQuestionsDetailVC", bundle: nil);
+        interDetailVC.tableDictionary = dataDcit as! Dictionary<String, Any>;
+        //interDetailVC.loadDetailContentWith(parameterDict: dataDcit as! Dictionary<String, Any>);
+        self.navigationController?.pushViewController(interDetailVC, animated: true);
     }
+
     /*
     // MARK: - Navigation
 

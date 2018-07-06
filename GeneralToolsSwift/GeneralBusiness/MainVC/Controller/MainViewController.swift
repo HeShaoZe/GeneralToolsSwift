@@ -10,6 +10,8 @@ import UIKit
 
 class MainViewController: UITabBarController {
 
+    var tabBarViewCD : SelectTabBarView?;
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -39,6 +41,7 @@ class MainViewController: UITabBarController {
             self.selectedIndex = indexNumber;
         }
         self.view.addSubview(tabBarViewCD);
+        self.tabBarViewCD = tabBarViewCD;
         self.sonViewAutoSuperView(sonView: tabBarViewCD, superView: self.view);
     }
     
@@ -62,6 +65,10 @@ class MainViewController: UITabBarController {
         superView.addConstraints([rightItem,buttomItem,leftItem]);
     }
 
+    func shouldHiddenTabbar(isHidden : Bool)
+    {
+        self.tabBarViewCD?.isHidden = isHidden;
+    }
     
     func loadMainView()
     {
