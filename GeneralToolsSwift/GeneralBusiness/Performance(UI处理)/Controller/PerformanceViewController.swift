@@ -27,7 +27,7 @@ class PerformanceViewController: UIViewController,UITableViewDelegate,UITableVie
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self;
         
-        let titleArray = ["打开添加卡片的页面","面试题"];
+        let titleArray = ["打开添加卡片的页面","iOS面试题"];
         self.tableDataArray = titleArray;
     }
     

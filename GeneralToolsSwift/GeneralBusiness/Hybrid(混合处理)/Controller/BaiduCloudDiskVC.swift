@@ -1,27 +1,32 @@
 //
-//  HybridViewController.swift
+//  BaiduCloudDiskVC.swift
 //  GeneralToolsSwift
 //
-//  Created by HeShaoZe on 2018/6/13.
+//  Created by hesz on 2018/7/8.
 //  Copyright © 2018年 HeShaoZe. All rights reserved.
 //
 
 import UIKit
 
-class HybridViewController: UIViewController {
+class BaiduCloudDiskVC: UIViewController {
 
-
-    @IBAction func startLoadWebView(_ sender: Any)
+    
+    @IBOutlet var myWebView: UIWebView!
+    
+    override func viewDidLoad()
     {
-        let baiduVC = BaiduCloudDiskVC.init(nibName: "BaiduCloudDiskVC", bundle: nil);
-        self.navigationController?.pushViewController(baiduVC, animated: true);
+        super.viewDidLoad()
+
+        self.loadMainUIView();
+        // Do any additional setup after loading the view.
     }
     
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    func loadMainUIView()
+    {
+        let dataUrl = URL.init(string: "");
+        let urlRequestT = URLRequest.init(url: dataUrl!);
+        self.myWebView.loadRequest(urlRequestT);
     }
 
     override func didReceiveMemoryWarning() {

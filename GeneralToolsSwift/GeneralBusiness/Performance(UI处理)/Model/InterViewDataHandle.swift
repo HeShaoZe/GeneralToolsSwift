@@ -14,6 +14,7 @@ class InterViewDataHandle: NSObject
     func loadFileSourceData() -> Array<Any>
     {
         let storgePath = self.storgePathInterviewFormSandbox();
+        print("storgePathffjdfji---\(storgePath)");
         let plistData = NSData.init(contentsOfFile: storgePath);
         
         if plistData?.length != 0
