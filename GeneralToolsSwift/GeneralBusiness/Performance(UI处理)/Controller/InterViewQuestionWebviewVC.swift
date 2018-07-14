@@ -26,6 +26,7 @@ class InterViewQuestionWebviewVC: InterViewBaseViewController {
     func loadMainWebview()
     {
         let url  = URL.init(string: self.webViewUrl);
+        print("webViewUrlfdfdfiji---\(self.webViewUrl)");
         self.myWebView.loadRequest(URLRequest.init(url: url!));
     }
     
