@@ -8,7 +8,7 @@
 
 import UIKit
 
-class InterviewQuestionsDetailVC: UIViewController {
+class InterviewQuestionsDetailVC: InterViewBaseViewController {
 
     @IBOutlet weak var oneConStraint: NSLayoutConstraint!
     
@@ -44,14 +44,7 @@ class InterviewQuestionsDetailVC: UIViewController {
         super.viewWillAppear(animated);
         self.hiddenTabBarItem(isHiddenT: true);
     }
-    
-    func hiddenTabBarItem(isHiddenT : Bool)
-    {
-        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate;
-        let mainVC : MainViewController = appDelegate.window?.rootViewController as! MainViewController;
-        mainVC.shouldHiddenTabbar(isHidden: isHiddenT);
-    }
-    
+
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated);

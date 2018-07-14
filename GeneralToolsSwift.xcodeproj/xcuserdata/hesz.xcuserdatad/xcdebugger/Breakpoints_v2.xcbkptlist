@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeneralToolsSwift/GeneralBusiness/ProcessingData(&#x6570;&#x636e;&#x5904;&#x7406;)/Model/DataProcessModel.swift"
+            timestampString = "552715842.318833"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "DataProcessModel"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeneralToolsSwift.DataProcessModel.__allocating_init() -&gt; GeneralToolsSwift.DataProcessModel"
+                  moduleName = "GeneralToolsSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hesz/Documents/Git2018/General0613PM/GeneralToolsSwift/GeneralToolsSwift/GeneralBusiness/ProcessingData(%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86)/Model/DataProcessModel.swift"
+                  timestampString = "552715855.6029119"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "GeneralToolsSwift.DataProcessModel.init() -&gt; GeneralToolsSwift.DataProcessModel"
+                  moduleName = "GeneralToolsSwift"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hesz/Documents/Git2018/General0613PM/GeneralToolsSwift/GeneralToolsSwift/GeneralBusiness/ProcessingData(%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86)/Model/DataProcessModel.swift"
+                  timestampString = "552715855.6065609"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "82">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "GeneralToolsSwift/GeneralBusiness/Performance(UI&#x5904;&#x7406;)/Controller/InterviewQuestionsVC.swift"
+            timestampString = "553259130.258729"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
+            landmarkName = "tableView(_:didSelectRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
