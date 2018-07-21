@@ -43,7 +43,11 @@ class InterViewDataHandle: NSObject
             if !contentString.isEmpty
             {
                 print("contentStringdjfidjmmf---\(contentString)");
+<<<<<<< HEAD
                 let strDict : [String : String] = ["title":contentString,"index":"\(numIndex)","content":""];
+=======
+                let strDict : [String : String] = ["title":contentString,"index":"\(numIndex)","content":"","pageUrl":"https://www.baidu.com"];
+>>>>>>> develop
                 resultArray.append(strDict);
             }
         }
