@@ -104,13 +104,11 @@ class InterviewQuestionsVC: UIViewController,UITableViewDelegate,UITableViewData
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        let dataDcit = self.tableDataArray[indexPath.row] as! NSDictionary;
-<<<<<<< HEAD
+
         let interDetailVC = InterviewQuestionsDetailVC.init(nibName: "InterviewQuestionsDetailVC", bundle: nil);
         interDetailVC.tableDictionary = dataDcit as! Dictionary<String, Any>;
         //interDetailVC.loadDetailContentWith(parameterDict: dataDcit as! Dictionary<String, Any>);
         self.navigationController?.pushViewController(interDetailVC, animated: true);
-=======
         
         let pageUrl : String = dataDcit["pageUrl"] as! String;
 
