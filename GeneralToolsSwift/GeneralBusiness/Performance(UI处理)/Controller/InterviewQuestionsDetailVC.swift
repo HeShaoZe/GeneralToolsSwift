@@ -39,7 +39,7 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
         //self.view.backgroundColor = UIColor.orange;
     }
     
-    override func viewWillAppear(_ animated: Bool)
+    override func viewWillAppear( animated: Bool)
     {
         super.viewWillAppear(animated);
         self.hiddenTabBarItem(isHiddenT: true);
@@ -127,7 +127,7 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
     @objc func keyBoardWillShow(_ notification : Notification)
     {
         //获取userInfo
-        let kbInfo = notification.userInfo
+      let kbInfo = notification.userInfo
         
         //获取键盘的size
         let kbRect = (kbInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -135,7 +135,7 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
         //键盘的y偏移量
         let changeY = kbRect.origin.y - self.view.frame.size.height;
         
-        //键盘弹出的时间
+         //键盘弹出的时间
         let duration = kbInfo?[UIKeyboardAnimationDurationUserInfoKey] as!Double
         
         //界面偏移动画

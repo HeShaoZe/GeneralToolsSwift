@@ -105,7 +105,6 @@ class InterviewQuestionsVC: UIViewController,UITableViewDelegate,UITableViewData
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
         let dataDcit = self.tableDataArray[indexPath.row] as! NSDictionary;
-        
         let pageUrl : String = dataDcit["pageUrl"] as! String;
 
         if pageUrl.isEmpty
