@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 class InterviewQuestionsDetailVC: InterViewBaseViewController {
 
     @IBOutlet weak var oneConStraint: NSLayoutConstraint!
@@ -20,19 +19,14 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
     
     @IBOutlet weak var bgSupView: UIView!
     
-    
-    
     @IBOutlet weak var myTitleLabel: UILabel!
-    
     @IBOutlet weak var myTextView: UITextView!
     
     var tableDictionary : Dictionary<String, Any> = [:];
     
-    
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-
+        super.viewDidLoad();
         self.loadMainUIView();
         self.loadRightButton();
         self.loadDetailContentWith(parameterDict: self.tableDictionary);
@@ -45,14 +39,7 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
         super.viewWillAppear(animated);
         self.hiddenTabBarItem(isHiddenT: true);
     }
-
     
-    func hiddenTabBarItem(isHiddenT : Bool)
-    {
-        let appDelegate : AppDelegate = UIApplication.shared.delegate as! AppDelegate;
-        let mainVC : MainViewController = appDelegate.window?.rootViewController as! MainViewController;
-        mainVC.shouldHiddenTabbar(isHidden: isHiddenT);
-    }
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated);
@@ -97,7 +84,6 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
     
     func loadDetailContentWith(parameterDict : Dictionary<String, Any>)
     {
-        print("myTextViewdjfidf--\(myTextView)");
         let interViewHandle = InterViewDataHandle.init();
         let conteStr = interViewHandle.findOutStringFrom(paraDict: parameterDict);
         print("conteStrdjifdj----\(conteStr)");
@@ -135,7 +121,7 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
     @objc func keyBoardWillShow(_ notification : Notification)
     {
         //获取userInfo
-        let kbInfo = notification.userInfo
+      let kbInfo = notification.userInfo
         
         //获取键盘的size
         let kbRect = (kbInfo?[UIKeyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
@@ -143,7 +129,7 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
         //键盘的y偏移量
         let changeY = kbRect.origin.y - self.view.frame.size.height;
         
-        //键盘弹出的时间
+         //键盘弹出的时间
         let duration = kbInfo?[UIKeyboardAnimationDurationUserInfoKey] as!Double
         
         //界面偏移动画
@@ -191,14 +177,4 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
         NotificationCenter.default.removeObserver(self);
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

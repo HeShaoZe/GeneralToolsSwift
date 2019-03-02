@@ -24,7 +24,7 @@ class BaiduCloudDiskVC: UIViewController {
     
     func loadMainUIView()
     {
-        let dataUrl = URL.init(string: "");
+        let dataUrl = URL.init(string: "https://www.baidu.com");
         let urlRequestT = URLRequest.init(url: dataUrl!);
         self.myWebView.loadRequest(urlRequestT);
     }

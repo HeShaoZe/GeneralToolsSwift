@@ -27,6 +27,12 @@ class DataRequestPageVC: UIViewController {
     }
     
     
+    @IBAction func AlamofireRequest(_ sender: Any)
+    {
+        //AlamofireRequest(<#T##sender: Any##Any#>)
+    }
+    
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
