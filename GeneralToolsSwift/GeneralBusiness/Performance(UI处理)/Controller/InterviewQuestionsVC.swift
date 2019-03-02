@@ -110,8 +110,12 @@ class InterviewQuestionsVC: UIViewController,UITableViewDelegate,UITableViewData
         if pageUrl.isEmpty
         {
             let dataDcit = self.tableDataArray[indexPath.row] as! NSDictionary;
-            let interDetailVC = InterviewQuestionsDetailVC.init(nibName: "InterviewQuestionsDetailVC", bundle: nil);
-            interDetailVC.tableDictionary = dataDcit as! Dictionary<String, Any>;
+            print("dataDcitfdjf----\(dataDcit)");
+            let interDetailVC = InterviewQuestionsVC.init(nibName: "InterviewQuestionsDetailVC", bundle: nil);
+            
+           //interDetailVC.tableDictionary = dataDcit as! Dictionary<String, Any>;
+            
+            //interDetailVC.tableDataArray = dataDcit as! Dictionary<String,Any>;
             //interDetailVC.loadDetailContentWith(parameterDict: dataDcit as! Dictionary<String, Any>);
             self.navigationController?.pushViewController(interDetailVC, animated: true);
         }

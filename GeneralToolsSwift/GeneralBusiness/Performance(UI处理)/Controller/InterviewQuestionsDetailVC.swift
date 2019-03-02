@@ -19,19 +19,14 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
     
     @IBOutlet weak var bgSupView: UIView!
     
-    
-    
     @IBOutlet weak var myTitleLabel: UILabel!
-    
     @IBOutlet weak var myTextView: UITextView!
     
     var tableDictionary : Dictionary<String, Any> = [:];
     
-    
     override func viewDidLoad()
     {
-        super.viewDidLoad()
-
+        super.viewDidLoad();
         self.loadMainUIView();
         self.loadRightButton();
         self.loadDetailContentWith(parameterDict: self.tableDictionary);
@@ -39,12 +34,12 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
         //self.view.backgroundColor = UIColor.orange;
     }
     
-    override func viewWillAppear( animated: Bool)
+    override func viewWillAppear(_ animated: Bool)
     {
         super.viewWillAppear(animated);
         self.hiddenTabBarItem(isHiddenT: true);
     }
-
+    
     override func viewDidAppear(_ animated: Bool)
     {
         super.viewDidAppear(animated);
@@ -89,7 +84,6 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
     
     func loadDetailContentWith(parameterDict : Dictionary<String, Any>)
     {
-        print("myTextViewdjfidf--\(myTextView)");
         let interViewHandle = InterViewDataHandle.init();
         let conteStr = interViewHandle.findOutStringFrom(paraDict: parameterDict);
         print("conteStrdjifdj----\(conteStr)");
@@ -183,14 +177,4 @@ class InterviewQuestionsDetailVC: InterViewBaseViewController {
         NotificationCenter.default.removeObserver(self);
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

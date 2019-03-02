@@ -58,7 +58,6 @@
 		4E8183D720DA27350045F070 /* SessionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8183C320DA27350045F070 /* SessionManager.swift */; };
 		4E8183D820DA27350045F070 /* ResponseSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8183C420DA27350045F070 /* ResponseSerialization.swift */; };
 		4E8183D920DA27350045F070 /* ServerTrustPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8183C620DA27350045F070 /* ServerTrustPolicy.swift */; };
-		4E8183DA20DA27350045F070 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E8183C720DA27350045F070 /* Info.plist */; };
 		4E8183DB20DA27350045F070 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E8183C820DA27350045F070 /* SessionDelegate.swift */; };
 		4E81842020DA5AE90045F070 /* DataRequestPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E81841E20DA5AE90045F070 /* DataRequestPageVC.swift */; };
 		4E81842120DA5AE90045F070 /* DataRequestPageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E81841F20DA5AE90045F070 /* DataRequestPageVC.xib */; };
@@ -142,7 +141,6 @@
 		4E8183C420DA27350045F070 /* ResponseSerialization.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResponseSerialization.swift; sourceTree = "<group>"; };
 		4E8183C520DA27350045F070 /* Alamofire.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Alamofire.h; sourceTree = "<group>"; };
 		4E8183C620DA27350045F070 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ServerTrustPolicy.swift; sourceTree = "<group>"; };
-		4E8183C720DA27350045F070 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4E8183C820DA27350045F070 /* SessionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SessionDelegate.swift; sourceTree = "<group>"; };
 		4E81841E20DA5AE90045F070 /* DataRequestPageVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequestPageVC.swift; sourceTree = "<group>"; };
 		4E81841F20DA5AE90045F070 /* DataRequestPageVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DataRequestPageVC.xib; sourceTree = "<group>"; };
@@ -290,7 +288,6 @@
 			children = (
 				4E81839120D9EFF00045F070 /* Controller */,
 				4E81839420D9EFF00045F070 /* Model */,
-				4E81839520D9EFF00045F070 /* View */,
 			);
 			path = "ProcessingData(数据处理)";
 			sourceTree = "<group>";
@@ -315,18 +312,10 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
-		4E81839520D9EFF00045F070 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		4E81839620D9EFF00045F070 /* MainVC */ = {
 			isa = PBXGroup;
 			children = (
 				4E81839720D9EFF00045F070 /* Controller */,
-				4E81839A20D9EFF00045F070 /* Model */,
 				4E81839B20D9EFF00045F070 /* View */,
 			);
 			path = MainVC;
@@ -339,13 +328,6 @@
 				4E81839820D9EFF00045F070 /* MainViewController.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		4E81839A20D9EFF00045F070 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
 			sourceTree = "<group>";
 		};
 		4E81839B20D9EFF00045F070 /* View */ = {
@@ -363,8 +345,6 @@
 			isa = PBXGroup;
 			children = (
 				4E8183A120D9EFF00045F070 /* Controller */,
-				4E8183A420D9EFF00045F070 /* Model */,
-				4E8183A520D9EFF00045F070 /* View */,
 			);
 			path = "Hybrid(混合处理)";
 			sourceTree = "<group>";
@@ -378,20 +358,6 @@
 				4378A9D020F1BF44004FFF15 /* BaiduCloudDiskVC.xib */,
 			);
 			path = Controller;
-			sourceTree = "<group>";
-		};
-		4E8183A420D9EFF00045F070 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4E8183A520D9EFF00045F070 /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
 			sourceTree = "<group>";
 		};
 		4E8183B320DA27350045F070 /* Vendor */ = {
@@ -423,7 +389,6 @@
 				4E8183C420DA27350045F070 /* ResponseSerialization.swift */,
 				4E8183C520DA27350045F070 /* Alamofire.h */,
 				4E8183C620DA27350045F070 /* ServerTrustPolicy.swift */,
-				4E8183C720DA27350045F070 /* Info.plist */,
 				4E8183C820DA27350045F070 /* SessionDelegate.swift */,
 			);
 			path = Alamofire;
@@ -546,7 +511,6 @@
 				4E81842120DA5AE90045F070 /* DataRequestPageVC.xib in Resources */,
 				4E8183A720D9EFF00045F070 /* PerformanceViewController.xib in Resources */,
 				43C0748420FA00F200234F1D /* InterViewQuestionWebviewVC.xib in Resources */,
-				4E8183DA20DA27350045F070 /* Info.plist in Resources */,
 				434038A920EFB80B00E62173 /* IQSourceData.txt in Resources */,
 				4E8183AC20D9EFF00045F070 /* SelectTabBarView.xib in Resources */,
 				4E8183B120D9EFF00045F070 /* HybridViewController.xib in Resources */,
