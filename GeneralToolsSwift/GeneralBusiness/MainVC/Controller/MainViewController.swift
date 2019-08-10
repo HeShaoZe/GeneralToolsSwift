@@ -12,6 +12,7 @@ class MainViewController: UITabBarController {
 
     var tabBarViewCD : SelectTabBarView?;
     
+    // MARK: - 实例方法
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -47,6 +48,14 @@ class MainViewController: UITabBarController {
     
     func sonViewAutoSuperView(sonView : UIView, superView : UIView)
     {
+        let isIphoneX = UIScreen.main.bounds.size.height > 800 ? true : false;
+        print("isIphoneXfjdijf---\(isIphoneX)")
+        var sonBottom : CGFloat = 0;
+        if isIphoneX == true
+        {
+            sonBottom = -34;
+        }
+        
         //superView.addSubview(sonView);
         sonView.translatesAutoresizingMaskIntoConstraints = false;
         //高度约束
@@ -56,7 +65,7 @@ class MainViewController: UITabBarController {
         let rightItem : NSLayoutConstraint = NSLayoutConstraint(item: sonView, attribute: .right, relatedBy:.equal, toItem:superView, attribute: .right, multiplier:1.0, constant:0);
         
         //底部约束
-        let buttomItem : NSLayoutConstraint = NSLayoutConstraint(item: sonView, attribute: .bottom, relatedBy:.equal, toItem:superView, attribute: .bottom, multiplier:1.0, constant:0);
+        let buttomItem : NSLayoutConstraint = NSLayoutConstraint(item: sonView, attribute: .bottom, relatedBy:.equal, toItem:superView, attribute: .bottom, multiplier:1.0, constant:sonBottom);
         
         //左边约束
         let leftItem : NSLayoutConstraint = NSLayoutConstraint(item: sonView, attribute: .left, relatedBy:.equal, toItem:superView, attribute: .left, multiplier:1.0, constant:0);
@@ -110,8 +119,17 @@ class MainViewController: UITabBarController {
         }
     }
     
-   
+    //适配判断是不是iPhonex
+    func isIphoneX() -> Bool
+    {
+        let screenW = UIScreen.main.bounds.size.width;
+        let screenH = UIScreen.main.bounds.size.height;
+        let isIphoneX : Bool = (screenW == 375 && screenH == 812) ? true : false;
+        return isIphoneX;
+    }
     
+    
+   // MARK: - 点击方法
     func exchangeViewControlerPage(button : UIButton)
     {
         let indexNum = button.tag - 100;

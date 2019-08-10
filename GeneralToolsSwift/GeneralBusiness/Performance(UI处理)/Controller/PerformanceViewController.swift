@@ -19,6 +19,8 @@ class PerformanceViewController: UIViewController,UITableViewDelegate,UITableVie
     {
         super.viewDidLoad()
         self.loadMainView();
+        
+        self.view.backgroundColor = UIColor.white;
         // Do any additional setup after loading the view.
     }
     
@@ -26,8 +28,20 @@ class PerformanceViewController: UIViewController,UITableViewDelegate,UITableVie
     {
         self.myTableView.delegate = self;
         self.myTableView.dataSource = self;
+        let view : UIView = UIView.init();
+        self.myTableView.tableFooterView = view;
         
         let titleArray = ["打开添加卡片的页面","iOS面试题"];
+        
+        /*var mutableArray : Array<Any> = [];
+        
+        for index in 0...20
+        {
+            print("indexfdjif---\(index)");
+            mutableArray.append("打开添加卡片的页面");
+        }*/
+        
+        
         self.tableDataArray = titleArray;
     }
     
