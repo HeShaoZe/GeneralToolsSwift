@@ -27,6 +27,14 @@ class ProcessingDataViewController: UIViewController {
         self.navigationController?.pushViewController(dataRequestVC, animated: true);
     }
 
+    @IBAction func userLogin(_ sender: Any) {
+        let userLoginVC = UserLoginViewController.init(nibName: "UserLoginViewController", bundle: nil);
+        userLoginVC.modalPresentationStyle = .fullScreen
+        self.present(userLoginVC, animated: true) {
+            
+        }
+        //self.navigationController?.pushViewController(userLoginVC, animated: true);
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

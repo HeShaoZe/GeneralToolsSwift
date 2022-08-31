@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -20,8 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7g-AQ-YPF">
-                    <rect key="frame" x="44" y="70" width="140" height="64"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7g-AQ-YPF">
+                    <rect key="frame" x="44" y="50" width="140" height="64"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="Sz7-4I-beu"/>
                         <constraint firstAttribute="width" constant="140" id="XA0-YP-YMJ"/>
@@ -31,13 +29,26 @@
                         <action selector="postRquest:" destination="-1" eventType="touchUpInside" id="Kwq-wz-hEO"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iir-LX-kBg">
+                    <rect key="frame" x="208" y="50" width="140" height="64"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="0HM-f1-gxm"/>
+                        <constraint firstAttribute="width" constant="140" id="Q13-mH-SnL"/>
+                    </constraints>
+                    <state key="normal" title="登录"/>
+                    <connections>
+                        <action selector="userLogin:" destination="-1" eventType="touchUpInside" id="2Wn-P2-m0o"/>
+                    </connections>
+                </button>
             </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="iir-LX-kBg" secondAttribute="trailing" constant="27" id="QIk-14-FHj"/>
+                <constraint firstItem="iir-LX-kBg" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="jFf-tA-XVG"/>
                 <constraint firstItem="d7g-AQ-YPF" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="lvR-EW-dci"/>
                 <constraint firstItem="d7g-AQ-YPF" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="44" id="nTH-i6-N31"/>
             </constraints>
-            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="33.5" y="53.5"/>
         </view>
     </objects>
