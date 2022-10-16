@@ -36,6 +36,18 @@ class ProcessingDataViewController: UIViewController {
         //self.navigationController?.pushViewController(userLoginVC, animated: true);
     }
     
+    @IBAction func customMyAlertView(_ sender: Any) {
+        let signTipView = MyCustomAlertView.init(frame: self.view.bounds)
+        signTipView.showSignInView()
+    }
+
+    @IBAction func beginMoveNoticeView(_ sender: Any) {
+        let noficationview = HengNoficationView.init(frame: CGRectMake(0, 50, self.view.width, self.view.height))
+        self.view.addSubview(noficationview)
+    }
+    
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
